@@ -1,0 +1,107 @@
+.login_page{
+    width: 30%;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px 5px gray;
+}
+.login_time{
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: cursive;
+}
+.login_logo{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: cursive;
+    color: brown;
+}
+.login_page input{
+    width: 80%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    border-bottom: 2px solid brown;
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding-left: 25px;
+    outline: none;
+}
+.login_page input::placeholder{
+    font-size: 20px;
+}
+.login_page button{
+    background-color: rgb(31, 143, 31);
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 5px 5px 5px 0 grey;
+}
+.login_save{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px; ;
+    color: blue;
+}
+
+@media only screen and (max-width: 1000px){
+    .login_page{
+        width: 60%;
+        margin: 30px auto;
+        padding: 20px;
+        border: 1px solid black;
+        border-radius: 20px;
+        box-shadow: 5px 10px 10px 5px gray;
+    }
+}
+@media only screen and (max-width: 500px){
+    .login_page{
+        width: 100%;
+        border: 0px solid black;
+        border-radius: 20px;
+        margin: 100px 0;
+        padding: 0 0 10px 0;
+        box-shadow: none;
+    }
+    .login_time{
+        margin: 0;
+        text-align: center;
+        font-weight: bold;
+        font-size: 50px;
+        font-family: cursive;
+    }
+    .login_logo{
+        font-size: 50px;
+        font-weight: bold;
+        font-family: cursive;
+        color: brown;
+    }
+}
+.succesful{
+    background-color: green;
+    width: 100%;
+    height: 100vh;
+    font-size: 50px;
+    font-family: cursive;
+    font-weight: bold;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.login_component{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.Link{
+    text-decoration: none;
+    color: black;
+}
