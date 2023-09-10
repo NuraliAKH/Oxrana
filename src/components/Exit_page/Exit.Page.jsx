@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react'
 import '../../style/Login.Page.css'
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
+
 export default function Exit_Page() {
 
     const [time, setTime] = useState(new Date());
     const [chiqish, setChiqish] = useState(true);
-    const [chiqishTime, setChiqishTime] = useState(null);
     const [userName, setUserName] = useState('');
+    const dispatch = useDispatch()
+
     useEffect(() => {
         const timer = setInterval(() => {
             setTime(new Date());
@@ -28,7 +31,7 @@ export default function Exit_Page() {
     const handleChiqishClick = () => {
         setChiqish(false)
         const currentTime = new Date().toLocaleTimeString();
-        setChiqishTime(currentTime)
+        dispatch({type:"addd" , payload:{chiqishTime:currentTime , userName:userName}})
     }
     return (
         chiqish ? (

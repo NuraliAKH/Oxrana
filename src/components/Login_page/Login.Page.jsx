@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../style/Login.Page.css';
 import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux'
 
 export default function Login_Page() {
     const [time, setTime] = useState(new Date());
@@ -9,13 +10,15 @@ export default function Login_Page() {
     const [userSurname, setUserSurname] = useState('');
     const [clickTime, setClickTime] = useState(null);
     const [mass, setMass] = useState([]);
+    const dispatch = useDispatch()
+
 
     useEffect(() => {
         const timer = setInterval(() => {
             setTime(new Date());
         }, 1000);
 
-        console.log(mass); // Переместили console.log сюда
+        // console.log(mass); // Переместили console.log сюда
 
         return () => {
             clearInterval(timer);
@@ -34,12 +37,13 @@ export default function Login_Page() {
         setKirish(false);
         const currentTime = new Date().toLocaleTimeString();
         setClickTime(currentTime);
-        const newVisitor = {
-            name: userName,
-            surname: userSurname,
-            time: currentTime
-        };
-        setMass([...mass, newVisitor]);
+        dispatch({
+            type: "add", payload: {
+                name: userName,
+                surname: userSurname,
+                time: currentTime
+            }
+        })
     };
 
     return (
