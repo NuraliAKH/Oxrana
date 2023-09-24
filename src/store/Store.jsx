@@ -1,9 +1,12 @@
-import {configureStore} from '@reduxjs/toolkit'
-import { setNCard } from './reducer/Info'  
+import { init } from "@rematch/core";
+import selectPlugin from "@rematch/select";
+import user from "./models/User";
 
-const store = configureStore({
-    reducer: {
-        setCard : setNCard
-    }
-})
-export {store}
+const store = init({
+  models: { user },
+  plugins: [selectPlugin()],
+});
+
+export const { select } = store;
+
+export default store;

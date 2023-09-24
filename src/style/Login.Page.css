@@ -18,27 +18,14 @@
     font-family: cursive;
     color: brown;
 }
-.login_page input{
-    width: 80%;
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    border-bottom: 2px solid brown;
-    margin-bottom: 10px;
-    font-size: 20px;
-    padding-left: 25px;
-    outline: none;
-}
-.login_page input::placeholder{
-    font-size: 20px;
-}
+
 .login_page button{
     background-color: rgb(31, 143, 31);
     width: 50%;
-    height: 50px;
-    border-radius: 10px;
+    height: 30px;
+    border-radius: 5px;
     border: none;
-    box-shadow: 5px 5px 5px 0 grey;
+    box-shadow: 1px 2px 2px 0 grey;
 }
 .login_save{
     display: flex;

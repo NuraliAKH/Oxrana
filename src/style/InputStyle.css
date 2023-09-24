@@ -1,0 +1,8 @@
+.textarea{
+    text-align: center;
+    width: 300px;
+}
+
+.textarea::placeholder{
+    text-align: center;
+}
