@@ -48,12 +48,13 @@ const user = {
     async User({ fio2 }) {
       dispatch.user.setSavingUserReducer(true);
       let data = await userService.User({
-        fio: `${fio2}`,
+        fio2: `${fio2}`,
       });
       console.log(data);
       dispatch.user.addUser2Reducer(data);
       dispatch.user.setSavingUserReducer(false);
     },
+    
   }),
 };
 

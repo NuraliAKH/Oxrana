@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import '../../style/Login.Page.css';
 import { useSelector, useDispatch } from 'react-redux'
 import '../../style/InputStyle.css'
+import { Link } from 'react-router-dom';
 import { PlusOutlined } from '@ant-design/icons';
 import { Divider, Input, Select, Space, Button } from 'antd';
 
@@ -142,9 +143,11 @@ export default function Login_Page() {
                     onChange={e => setCause(e.target.value)}
                 />
                 <div style={{ margin: '24px 0' }} />
+                <Link to="/exit">
                 <button onClick={handleCreate} disabled={isSavingUser}>
                     Kirish
                 </button>
+                </Link>
             </div>
 
         </div>
